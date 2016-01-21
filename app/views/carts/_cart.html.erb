@@ -1,0 +1,17 @@
+<h2>Ваша корзина</h2>
+
+<table>
+
+  <%= render(cart.line_items) %>
+
+  <tr class="total_line">
+    <td colspan="2">Общая сумма</td>
+    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+  </tr>
+</table>
+
+<%= hidden_div_if(params[:controller] == 'orders') do %>
+  <%= button_to 'Заказать', new_order_path, method: :get, id: 'hide_button' %>
+  <%= button_to 'Очистить корзину', cart, method: :delete, remote: true,
+                data: { confirm: 'Вы уверены?' } %>
+<% end %>

@@ -1,0 +1,17 @@
+/**
+ * Created by Admin on 11.12.2015.
+ */
+
+$('p#notice').hide();
+
+$('#header').hide()
+
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000) }
+
+
+$('#cart').html("<%= escape_javascript render(@cart) %>");
+
+$('#current_item').css({'background-color':'#77ee77'}).
+    animate({'background-color':'#114411'}, 500)
+
+if ($('#cart tr').length == 1) { $('#cart').html("<h2>Корзина пуста</h2>") }
