@@ -18,7 +18,11 @@ group :test do
   gem 'capybara' #, '2.1.0'
   gem 'factory_girl_rails', '4.5.0'
   gem 'rack_session_access'
+end
 
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
 # Use SCSS for stylesheets
@@ -62,3 +66,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+ruby '2.1.7'
