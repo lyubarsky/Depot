@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   #   rescue_from ActionController::RoutingError, with: -> { render_404  }
   # end
 
-  # before_action :authorize
+  before_action :authorize
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
