@@ -16,7 +16,7 @@
 
 #banner {
   background: #9c9;
-  padding: 10px;
+  padding: 15px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman" serif;
   color: #282;
@@ -38,9 +38,10 @@
 
 #columns {
   background: #141;
+  padding: 1em;
 
   #main {
-    margin-left: 29em;
+    margin-left: 0em;
     padding: 1em;
     background: white;
   }
@@ -63,7 +64,7 @@
       font-size: small;
       color: white;
 
-      tabel {
+      table {
         border-top: 1px dotted #595;
         border-bottom: 1px dotted #595;
         margin-bottom: 10px;
